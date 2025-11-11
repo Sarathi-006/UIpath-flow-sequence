@@ -1,88 +1,56 @@
-# UiPath Flow Sequence – Repeat, While, and Do While Loops
+# UiPath – Flow Sequence: Repeat, While, and Do While Loops
 
-This UiPath project demonstrates the use of **Repeat**, **While**, and **Do While** loops inside a Flow Sequence workflow.  
-The example uses a simple integer variable `counter` to show how each loop behaves.
+This repository contains a UiPath workflow that demonstrates how to:
 
----
-
-## 🎯 Project Objective
-
-To understand how different loops work in UiPath:
-
-| Loop Type | Executes At Least Once? | Condition Checked | Description |
-|------------|--------------------------|------------------|--------------|
-| **Repeat** | ✅ Yes (fixed count) | No condition | Runs a fixed number of times |
-| **While**  | ❌ No | Before each iteration | Runs *while* a condition is true |
-| **Do While** | ✅ Yes | After each iteration | Runs until a condition becomes false |
+- Use **Repeat**, **While**, and **Do While** loops in a **Flow Sequence**
+- Increment and track a counter variable through each loop
+- Display the results in the **Output Panel** or **Message Box**
 
 ---
 
-## 🧩 Variables
-
-| Name | Type | Default Value | Description |
-|------|------|----------------|--------------|
-| `counter` | Int32 | 0 | Used to count and track loop iterations |
-
----
-
-## ⚙️ Steps to Create in UiPath Studio
-
-### 1. Create a New Project
-- Open **UiPath Studio**
-- Click **Process → New**
-- Name it: `FlowSequenceLoops`
-- Choose a folder and click **Create**
+## 📘 Project Overview
+- Built using **UiPath Studio (Modern Design Experience)**
+- Demonstrates usage of **Assign**, **Repeat Number of Times**, **While**, and **Do While** activities  
+- Ideal for learning loop control and flow logic in UiPath
 
 ---
 
-### 2. Add Variables
-- Go to the **Variables** panel (bottom of the screen)
-- Add:
-  - `counter` → Type: **Int32**, Default: `0`
+## 📂 Project Files
+- **Main.xaml** → Main automation workflow  
+- **project.json** → UiPath project configuration file  
 
 ---
 
-### 3. Build the Flow Sequence
+## ⚙️ Workflow Logic
 
-#### 🧱 Step 1 – Assign
-- Activity: **Assign**
-- Expression:  
-  `counter = 0`
+### 🔹 Assign
+Initializes a counter variable:
 
----
+### 🔹 Repeat Number of Times
+Executes a set of actions 3 times:
 
-#### 🔁 Step 2 – Repeat Number of Times
-- Activity: **Repeat Number of Times**
-- Property → `NumberOfTimes = 3`
-- Inside Body:
-  1. **Assign:** `counter = counter + 1`
-  2. **Log Message:** `"Repeat Loop → Counter = " + counter.ToString`
+### 🔹 While Loop
+Repeats the process while the counter is less than 6:
 
----
+### 🔹 Do While Loop
+Executes at least once and continues while the counter is less than 9:
 
-#### 🔁 Step 3 – While Loop
-- Activity: **While**
-- Condition: `counter < 6`
-- Inside Body:
-  1. **Assign:** `counter = counter + 1`
-  2. **Log Message:** `"While Loop → Counter = " + counter.ToString`
+### 🔹 Final Log Message
+Displays the final counter value:
 
 ---
 
-#### 🔁 Step 4 – Do While Loop
-- Activity: **Do While**
-- Condition: `counter < 9`
-- Inside Body:
-  1. **Assign:** `counter = counter + 1`
-  2. **Log Message:** `"Do While Loop → Counter = " + counter.ToString`
-
----
-
-#### ✅ Step 5 – Final Log Message
-- Activity: **Log Message**
-- Message: `"Final Counter = " + counter.ToString`
-
----
+## 🧩 Example Output
+Repeat Loop → Counter = 1
+Repeat Loop → Counter = 2
+Repeat Loop → Counter = 3
+While Loop → Counter = 4
+While Loop → Counter = 5
+While Loop → Counter = 6
+Do While Loop → Counter = 7
+Do While Loop → Counter = 8
+Do While Loop → Counter = 9
+Final Counter = 9
 
 ### OUTPUT  
 <img width="1919" height="1018" alt="Screenshot 2025-11-11 082705" src="https://github.com/user-attachments/assets/044b965d-c26c-44c0-85a2-4c0a2d78ee0f" />
