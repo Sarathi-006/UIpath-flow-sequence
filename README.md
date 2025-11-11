@@ -42,14 +42,23 @@ Displays the final counter value:
 
 ## 🧩 Example Output
 Repeat Loop → Counter = 1
+
 Repeat Loop → Counter = 2
+
 Repeat Loop → Counter = 3
+
 While Loop → Counter = 4
+
 While Loop → Counter = 5
+
 While Loop → Counter = 6
+
 Do While Loop → Counter = 7
+
 Do While Loop → Counter = 8
+
 Do While Loop → Counter = 9
+
 Final Counter = 9
 
 ### OUTPUT  
